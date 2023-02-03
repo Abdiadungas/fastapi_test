@@ -4,6 +4,6 @@ from config.db import conn
 from schemas.post import  serializeList
 user = APIRouter() 
 
-@user.get('/')
+@user.get('/post')
 async def find_all_users():
     return serializeList(conn.Job.camp.find())
